@@ -1,0 +1,95 @@
+
+\documentclass[xcolor=table]{beamer}
+\usetheme{default}
+\definecolor{darkscarlet}{rgb}{0.34, 0.01, 0.1}
+\usecolortheme{default}
+\usecolortheme[named=darkscarlet]{structure}
+\setbeamercolor{title}{bg=white, fg=darkscarlet}
+\definecolor{cerise}{rgb}{0.87, 0.19, 0.39}
+\hypersetup{colorlinks=TRUE,linkcolor=cerise,urlcolor=cerise, citecolor=cerise}
+
+% nummering
+
+\setbeamertemplate{caption}[numbered]
+
+% taal
+
+\usepackage[english]{babel}
+
+% tekens
+
+\usepackage{fontspec}
+\usefonttheme{serif}
+\setmainfont[BoldFont=brillb.ttf, ItalicFont=brilli.ttf, BoldItalicFont=brillbi.ttf]{brill.ttf}
+
+% tekst doorstrepen, kennelijk heb je daar een apart pakket voor nodig
+
+\usepackage[normalem]{ulem}
+
+% plaatjes
+
+\usepackage{graphicx}
+
+% tabellen
+
+\usepackage{multirow}
+
+% voorbeelden
+
+\usepackage{philex}
+
+% glossen
+
+\usepackage{leipzig}
+\input{glosses.tex}
+\makeglossaries
+
+% bibliography
+
+\usepackage[backend=biber,babel=other,
+        bibstyle=biblatex-sp-unified,
+        citestyle=sp-authoryear-comp,
+        doi=false,
+        maxcitenames=3,
+        maxbibnames=99]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+% custom footline
+
+\setbeamerfont{footline}{size=\fontsize{20}{20}\selectfont}
+
+\newcommand{\Ffootline}{\footnotesize
+\insertsection
+\hfill
+\href{https://github.com/sverhees/}{link to Github}
+\hfill
+\insertframenumber/\inserttotalframenumber} 
+
+% custom footline deel 2
+
+\setbeamertemplate{footline}{%
+\usebeamerfont{structure}
+\begin{beamercolorbox}[wd=\paperwidth,ht=2.25ex,dp=1ex]{title in head/foot}%
+\Tiny\hspace*{4mm} \Ffootline \hspace{4mm}
+\end{beamercolorbox}}
+
+% navigatiesymbolen uitzetten
+
+\beamertemplatenavigationsymbolsempty
+ 
+ 
+% titelpagina 
+
+\title{Variation in two dictionaries of Botlikh}
+\author{George Moroz, Chiara Naccarato, Samira Verhees \\
+Linguistic Convergence Laboratory at NRU HSE Moscow}
+\date{Документирование языков и диалектов коренных малочисленных народов России\\ 14--16.10.2019 - St.Petersburg}
+
+
+% links
+
+\usepackage{hyperref}
+
+%\newcommand\pro{\item[$+$]}
+%\newcommand\con{\item[$-$]}
